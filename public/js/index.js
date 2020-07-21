@@ -17,6 +17,9 @@ const handleDropdownChange = (e) => {
 
   if (e.target.value) {
     window.location = `/${e.target.value}/${quantity.value}/1`;
+  } else {
+    window.location = `/`;
+
   }
 };
 
