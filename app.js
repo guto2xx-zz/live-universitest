@@ -19,6 +19,7 @@ app.get("/:option?/:quantity?/:page?", (req, res, next) => {
 
   res.locals.mainList = paginatedList;
   res.locals.quantity = req.params.quantity;
+  res.locals.optionSelected = req.params.option;
 
   res.render("index", {
     title: "teste de express/nodemon",

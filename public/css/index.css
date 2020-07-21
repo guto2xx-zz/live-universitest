@@ -19,16 +19,18 @@ body {
   display: flex;
   width: 1200px;
   height: 800px;
-  background-color: red;
+  background-color: #b37dd8;
+  border-radius: 30px;
 }
 
 .sideBarWrapper {
   height: 100%;
   width: 25%;
-  background-color: rebeccapurple;
+  background-color: #533b75;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 30px 0px 0px 30px;
 }
 
 .quantityWrapper {
@@ -53,7 +55,7 @@ body {
 
   height: 100%;
   width: 15%;
-  background-color: pink;
+  background-color: #7957a9;
   transition: 0.2s;
 }
 
@@ -64,4 +66,58 @@ body {
 
 .quantity.error {
   border: 2px solid red;
+}
+
+.mainList {
+  width: 100%;
+}
+
+.mainList ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.mainList li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+  width: 90%;
+  height: 100px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #e6e6e6;
+}
+
+.mainList li .identify {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #c1c1c1;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainList li .content {
+  font-size: 20px;
+  margin-right: 50px;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination button:first-child {
+  margin-right: 60px;
 }

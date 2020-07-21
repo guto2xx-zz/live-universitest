@@ -11,10 +11,10 @@
 
 <div class="hiddenBarWrapper hidden" id="subBar">
   <select class="dropdown" id="dropdown">
-    <option>Dropdown</option>
+    <option value="">Dropdown</option>
 
     <% options.forEach(function(option){ %>
-    <option><%= option %></option>
+    <option <% if (option == optionSelected) { %> selected <% } %>><%= option %></option>
     <% }); %>
   </select>
 </div>

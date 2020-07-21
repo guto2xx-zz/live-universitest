@@ -4,11 +4,8 @@ const handleOpenSubBar = () => {
   subBarElm.classList.toggle("hidden");
 };
 
-var _MAINLIST = [];
-
 const handleDropdownChange = (e) => {
   const quantity = document.getElementById("quantity");
-  const mainList = document.getElementById("mainList");
 
   if (!quantity.value || quantity.value === "0") {
     quantity.classList.add("error");
@@ -18,8 +15,18 @@ const handleDropdownChange = (e) => {
     quantity.classList.remove("error");
   }
 
-  window.location = `/${e.target.value}/${quantity.value}/1`;
+  if (e.target.value) {
+    window.location = `/${e.target.value}/${quantity.value}/1`;
+  }
 };
+
+const handleQuantityChange = (e) => {
+  const dropdown = document.getElementById("dropdown");
+
+  if (dropdown.value) {
+    window.location = `/${dropdown.value}/${e.target.value}/1`;
+  }
+}
 
 const pagination = (type) => {
   const href = window.location.href.split('/')
@@ -38,7 +45,7 @@ const pagination = (type) => {
       newPage--
       break;
     case 'next':
-      if (newPage > maxPages) {
+      if (newPage >= maxPages) {
         return
       }
 
@@ -55,6 +62,8 @@ const pagination = (type) => {
 
 window.onload = function () {
   document.getElementById("option").addEventListener("click", handleOpenSubBar);
+
+  document.getElementById("quantity").addEventListener("change", handleQuantityChange);
 
   document
     .getElementById("dropdown")

@@ -1,10 +1,20 @@
-<div id="mainList">
+<div id="mainList" class='mainList'>
   <ul>
-    <% mainList.forEach(function(obj){ %>
-    <li><%= obj %></li>
+    <% mainList.forEach(function(obj, i){ %>
+    <li>
+      <span class='identify'><%= obj.substring(1);  %></span>
+      <span class='content'>Item <%= obj %></span>
+      <span class='space'></span>
+    </li>
     <% }); %>
   </ul>
 
-  <button class="btn btn-secondary" onclick="pagination('prev')"><%= "<" %> </button>
-  <button class="btn btn-secondary" onclick="pagination('next')"><%= ">" %> </button>
+  <% if (quantity > 3) { %>
+  <div class="pagination">
+    <button class="btn btn-secondary" onclick="pagination('prev')"><%= "<" %> </button>
+    <button class="btn btn-secondary" onclick="pagination('next')"><%= ">" %> </button>
+  </div>
+  <% } %>
+
+
 </div>
