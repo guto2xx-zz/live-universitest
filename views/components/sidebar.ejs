@@ -1,17 +1,16 @@
 <div class="sideBarWrapper">
-  <button id="option">Option</button>
+  <button class="btn btn-primary btnOption" id="option">Option</button>
 
-  <label>Quantity:</label>
-  <input
-    class="quantity"
-    id="quantity"
-    value="<%=quantity%>"
-    placeholder="type here"
-  />
+  <div class="input-group mb-3 quantityWrapper">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Quantity:</span>
+    </div>
+    <input type='number' class="quantity form-control" id="quantity" value="<%=quantity%>" placeholder="type here" />
+  </div>
 </div>
 
 <div class="hiddenBarWrapper hidden" id="subBar">
-  <select id="dropdown">
+  <select class="dropdown" id="dropdown">
     <option>Dropdown</option>
 
     <% options.forEach(function(option){ %>

@@ -18,24 +18,40 @@ const handleDropdownChange = (e) => {
     quantity.classList.remove("error");
   }
 
-  window.location = `/${e.target.value}/${quantity.value}`;
-
-  // mainList.innerHTML = "";
-
-  // const ul = document.createElement("ul");
-
-  // mainList.appendChild(ul);
-
-  // for (var i = 0; i < Number(quantity.value); i++) {
-  //   var li = document.createElement("li");
-
-  //   ul.appendChild(li);
-  //   li.innerHTML = `${li.innerHTML} ${e.target.value + i}`;
-  // }
-
-  // mainList.console.log(quantity);
-  // console.log(e.target.value);
+  window.location = `/${e.target.value}/${quantity.value}/1`;
 };
+
+const pagination = (type) => {
+  const href = window.location.href.split('/')
+
+
+  let newPage = Number(href[5])
+
+  const maxPages = Number(href[4]) / 3
+
+  switch (type) {
+    case 'prev':
+      if (newPage === 1) {
+        return
+      }
+
+      newPage--
+      break;
+    case 'next':
+      if (newPage > maxPages) {
+        return
+      }
+
+      newPage++
+      break;
+
+  }
+
+
+  window.location = `/${href[3]}/${href[4]}/${newPage}`;
+
+
+}
 
 window.onload = function () {
   document.getElementById("option").addEventListener("click", handleOpenSubBar);
