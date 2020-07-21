@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" type="text/css" href="/css/index.css" />
+    <script src="/js/index.js"></script>
+  </head>
+
+  <body>
+    <main class="appWrapper">
+      <!-- SIDEBAR -->
+      <%- include("components/sidebar", {options: ["A", "B"]}) -%>
+
+      <!-- MAIN CONTENT -->
+      <%- include("components/main") -%>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+input:focus,
+select:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.appWrapper {
+  display: flex;
+  width: 1200px;
+  height: 800px;
+  background-color: red;
+}
+
+.sideBarWrapper {
+  height: 100%;
+  width: 25%;
+  background-color: rebeccapurple;
+}
+
+.hidden {
+  width: 0px !important;
+  overflow: hidden;
+}
+
+.hiddenBarWrapper {
+  height: 100%;
+  width: 15%;
+  background-color: pink;
+  transition: 0.2s;
+}
+
+.quantity.error {
+  border: 2px solid red;
+}

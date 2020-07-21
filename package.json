@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/guto2xx/live-universitest#readme",
   "dependencies": {
+    "ejs": "^3.1.3",
     "express": "^4.17.1"
   },
   "devDependencies": {

@@ -1,0 +1,21 @@
+<div class="sideBarWrapper">
+  <button id="option">Option</button>
+
+  <label>Quantity:</label>
+  <input
+    class="quantity"
+    id="quantity"
+    value="<%=quantity%>"
+    placeholder="type here"
+  />
+</div>
+
+<div class="hiddenBarWrapper hidden" id="subBar">
+  <select id="dropdown">
+    <option>Dropdown</option>
+
+    <% options.forEach(function(option){ %>
+    <option><%= option %></option>
+    <% }); %>
+  </select>
+</div>
